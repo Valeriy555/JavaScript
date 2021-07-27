@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tasks-lesson4</title>
+</head>
+<body>
+<script>
+
+    // 1.- створити функцію, яка генерує масив рандомних числових цілих значень в діапазоні від 0 до 100.
+
+    let array = []
+    function CreateArray(array) {
+        let min = 0;
+        let max = 100;
+
+        for (let i = min; i < max; i++) {
+            array.push(Math.floor(Math.random()*(max-min)+min));
+
+        }
+        return array;
+    }
+    console.log(CreateArray(array));
+
+    // 2. - Змінти попередню функцію, щоб діапазон можна було визначити через аргументи.
+    let arr = [];
+    function CreateArr(arr,min,max) {
+
+        for (let i = min; i < max; i++) {
+            arr.push(Math.floor(Math.random()*(max-min)+min));
+        }
+        return arr;
+    }
+
+    CreateArr(arr,0,10);
+    console.log(arr);
+
+    //3. - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень.
+    //     Відсортувати його за допомоги sort
+
+    let arr1 = [];
+    CreateArr(arr1,0,15);
+    arr1.sort((min, max) => min - max);
+    console.log(arr1);
+
+   // 4. - створити (або згенерувати, за допомоги попередньої функції) масив рандомних цілих числових значень.
+   //  відфільтрувати  його за допомоги filter, за лишивши тільки парні числа
+
+    let arr2 = [];
+    CreateArr(arr2,0,100);
+
+    console.log(arr2.filter((min) => (min) % 2===0));
+
+    // 5.- створити масив рандомних цілих числових значень (або згенерувати, за допомоги попередньої функції) .
+    // за допомоги map та колбеку перетворити всі об'єкти в масиві на срінгові.
+
+    let arr3 = [];
+    CreateArr(arr3,0,20);
+
+    let map=arr3.map(function (elem){
+        return String(elem);})
+
+    console.log(map);
+
+    // 6.- Створити функцію конструктор для об'єктів User з полями id, name, surname , email, phone
+    class User {
+        constructor(id, name, surname, email, phone) {
+            this.id = id;
+            this.name = name;
+            this.surname = surname;
+            this.email = email;
+            this.phone = phone;
+        }
+    }
+
+    // 7. створити пустий масив, наповнити його 10 об'єктами new User(....)
+
+    let users = [
+        new User(2,'Diana','Petrova', 'petrova@gmail.com', '734-28-52'),
+        new User(5,'Sergey','Kravchuck', 'kravchuck@gmail.com', '734-28-55'),
+        new User(8,'Valeriy','Holenko','holenko@gmail.com','734 - 28 - 58'),
+        new User(4,'Sveta','Ivanova', 'ivanova@gmail.com', '734-28-54'),
+        new User(9,'Dasha','Koval', 'koval@gmail.com', '734-28-59'),
+        new User(10,'Olya','Kof', 'kof@gmail.com', '734-28-10'),
+        new User(1,'Oleg','Rush', 'rush@gmail.com', '734-28-01'),
+        new User(3,'Petr','Poroh', 'potoh@gmail.com', '734-29-03'),
+        new User(6,'Jack','Kusto', 'kusto@gmail.com', '734-28-06'),
+        new User(7,'Bred','Pit', 'pit@gmail.com', '734-28-07'),
+    ]
+    //8. Взяти масив цей  User[] та: Відфільтрувати , залишивши тільки об'єкти з парними id (filter)
+
+    console.log(users.filter((User => (User.id) % 2===0)));
+
+    // 9. Відсортувати його по id. по зростанню (sort)
+
+    console.log(users.sort((min, max) => min.id - max.id));
+
+
+
+
+</script>
+</body>
+</html>

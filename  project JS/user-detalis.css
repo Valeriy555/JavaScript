@@ -1,0 +1,67 @@
+.userInfoDiv {
+    width: 1260px;
+    height: 500px;
+    padding: 30px;
+    font-size: 25px;
+    background: brown;
+    border: 3px solid black;
+}
+
+.pos {
+    width: 1322px;
+    height: 50px;
+    background: #334aff;
+    border: 2px solid black;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    width: 90%;
+    height: 40px;
+    font-size: 25px;
+    cursor: pointer;
+    background: aqua;
+    border: 1px solid black;
+}
+
+.post-box {
+    width: 1307px;
+    height: 380px;
+    background: silver;
+    border: 3px solid black;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15px;
+
+}
+
+div {
+    font-size: 20px;
+    height: 150px;
+    width: 18%;
+    border: 1px solid black;
+    margin: 10px;
+    background: brown;
+    position: relative;
+    text-align: justify;
+
+}
+
+a {
+    width: 120px;
+    height: 25px;
+    border: 1px solid black;
+    background: aqua;
+    position: absolute;
+    bottom: 15px;
+    left: 50px;
+    cursor: pointer;
+    border-radius: 48%;
+    text-align: center;
+}
+
+

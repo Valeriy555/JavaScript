@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Additional_2</title>
+</head>
+<body>
+
+<script>
+
+    // Дополнительно
+
+    // 1. С помощью окна ввода, вызываемого методом prompt, сделать сложение двух чисел,
+    // а вывод результата при помощи метода alert
+
+    let num1 = +prompt('Введите первое число',);
+    let num2 = +prompt('Введите второе число',);
+    let result= num1+num2;
+    alert(`Результат сложения чисел:  ${result}`);
+
+    // 2. С помощью окна ввода, вызываемого методом prompt, пользователь последовательно выводит имя, фамилию и возраст,
+    // а вам не обходимо вывести строку такого вида Доброго вечера Иван Иванов, мои поздравления что вам 32 ,
+    // а вывод результата при помощи метода alert
+
+
+    let name =prompt('Імя', 'Валерій');
+    let midName = prompt('Призвище', 'Голенко');
+    let old = prompt('Вік', 39 );
+
+    document.write(`<h3>"Доброго вечора, ${name} ${midName}. Мої вітання, що Вам ${old} років"</h3>`);
+
+    // 3. Три різних числа вводяться через prompt().
+    // За допомоги if else вивести іх в порядку зростання. (відсортувати по зростанню)
+
+    let first = +prompt('Введить перше число',);
+    let second = +prompt('Введить друге число',);
+    let third = +prompt('Введить третє число',);
+
+    if (first <= second && first <= third && second <= third) {
+        console.log(`${first} ${second} ${third}`)
+        document.write(`${first} ${second} ${third}`)
+
+
+    } else if (third <= first && third <= second && first <= second) {
+        console.log(`${third} ${first} ${second}`)
+        document.write(`${third} ${first} ${second}`)
+
+    } else if (second <= first && second <= third && third <= first) {
+        console.log(`${second} ${third} ${first}`)
+        document.write(`${second} ${third} ${first}`)
+
+    } else if (second <= first && second <= third && first <= third) {
+        console.log(`${second} ${first} ${third}`)
+        document.write(`${second} ${first} ${third}`)
+
+    } else if (third <= first && third <= second && second <= first) {
+        console.log(`${third} ${second} ${first}`)
+        document.write(`${third} ${second} ${first}`)
+
+    } else if (first <= third && first <= second && third <= second) {
+        console.log(`${first} ${third} ${second}`)
+        document.write(`${first} ${third} ${second}`)
+    }
+
+    // 4. Все параматры получаем с клавиатуры!!!!
+    //     Имитируем поведение пешехода на перекстке.
+    //     Если светофор зеленый - вывести "иди".
+    //     Если светофор желтый - вывести "подожди".
+    //     Если светофор красный - вывести "стой".
+    //     Если светофор в аварийном режиме вывести "делай что хочешь"!
+
+    let trafficLights = prompt('ВВЕДИТЕ ЦВЕТ СИГНАЛА СВЕТОФОРА В НИЖНЕМ РЕГИСТРЕ:', '');
+
+
+    if (trafficLights === 'зеленый') {
+        console.log("Иди")
+        document.write("Иди !!!")
+
+    } else if (trafficLights === 'желтый') {
+        console.log("Подожди")
+        document.write("Подожди !!!")
+
+    } else if (trafficLights === 'красный')  {
+        console.log("Стой")
+        document.write("Стой, ЗАДАВЯТ !!!")
+    }else if (trafficLights === 'аварийный режим')  {
+        console.log("Стой")
+        document.write("Делай, что хочешь)))")
+    }
+
+
+    // 5. Все параметры получаем с клавиатуры!!!!(prompt , confirm)
+    // Создать переменную isRoadClear которая характеризирует наличие на дороге машин.
+    //     Улучшаем предыдущее задание.
+
+    let trafficLights_ = prompt('ВВЕДИТЕ ЦВЕТ С  СИГНАЛА СВЕТОФОРА В НИЖНЕМ РЕГИСТРЕ:', '');
+    let isRoadClear = confirm('Машины есть ?')
+    if (trafficLights_ === 'зеленый' && isRoadClear===false) {
+        console.log ('Иди');
+        document.write('Иди!!!');
+    }
+    else if (trafficLights_ === 'зеленый' && isRoadClear===true) {
+        console.log ('Подожди пока нарушители проедут!!!');
+        document.write('Подожди пока нарушители проедут!!!');
+    }
+    else if (trafficLights_ === 'желтый' && isRoadClear===false) {
+        console.log ('Все ровно жди!!!');
+        document.write('Все ровно жди!!!');
+    }
+    else if (trafficLights_ === 'желтый' && isRoadClear===true) {
+        console.log ('Жди!!!');
+        document.write('Жди!!!');
+    }
+    else if (trafficLights_ === 'красный'  && isRoadClear===false) {
+        console.log ('Стой все ровно!!!');
+        document.write('Стой все ровно!!!');
+    } else if (trafficLights_ === 'красный'  && isRoadClear===true) {
+        console.log ('Стой и жди!!!');
+        document.write('Стой и жди!!!');
+    }
+    else if (trafficLights_ === '') {
+        console.log ('Делай что хочешь!!!');
+        document.write('Делай что хочешь!!!');
+    }
+
+
+</script>
+
+</body>
+</html>

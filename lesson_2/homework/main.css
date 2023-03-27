@@ -1,13 +1,13 @@
 .simpson-box_2_1 div{
-    height: 400px;
+    height: 320px;
     background: aqua;
     margin: 3px;
     text-align: justify;
 }
 
 .picture{
-    width: 180px;
-    height: 269px;
+    width: 120px;
+    height: 209px;
     float: right;
 margin-top: 30px;
 }
@@ -51,4 +51,5 @@ margin-top: 30px;
     width: 45%;
     background: silver;
     margin: 3px;
+
 }

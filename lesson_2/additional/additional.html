@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Additional_lesson 2</title>
+    <link rel="stylesheet" href="additional.css">
+</head>
+<body>
+<script>
+    // Зробити масив з 10 чисел [2,17,13,6,22,31,45,66,100,-18]та:
+
+    let array = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18]
+
+    // 1. перебрати його циклом while
+    document.write('<div>')
+    console.log('----while-----')
+
+    let a = 0;
+    while (a < array.length) {
+        let arr = array[a];
+        console.log(arr)
+        document.write(`${arr}, `)
+        a++;
+    }
+    document.write('</div> <hr/>')
+
+    // 2. перебрати його циклом for
+    document.write('<div>')
+    console.log('----for-----')
+
+    for (let a = 0; a < array.length; a++) {
+        let arr = array[a];
+        console.log(arr)
+        document.write(`${arr}, `)
+    }
+    document.write('</div> <hr/>')
+
+    // 3. перебрати циклом while та вивести  числа тільки з непарним індексом
+    console.log('-------числа тільки з непарним індексом циклом while----')
+    document.write('<div> ')
+
+    let b = 0;
+    while (b < array.length) {
+        let arr = array[b];
+        if (array.indexOf(arr) % 2 !== 0) {
+            document.write(`<div> index: ${array.indexOf(arr)}, number: ${arr}  </div> `)
+            console.log(arr)
+        }
+        b++;
+    }
+    document.write('</div> <hr/>')
+
+    // 4. перебрати циклом for та вивести  числа тільки з непарним індексом
+    console.log('-------числа тільки з непарним індексом циклом for----')
+    document.write('<div> ')
+
+    for (let b = 0; b < array.length; b++) {
+        let arr = array[b];
+        if (array.indexOf(arr) % 2 !== 0) {
+            document.write(`<div> index: ${array.indexOf(arr)}, number: ${arr}  </div> `)
+            console.log(arr)
+        }
+    }
+    document.write('</div> <hr/>')
+
+    // 5. перебрати циклом while та вивести  числа тільки парні  значення
+    console.log('-------числа тільки з парним значенням циклом while----')
+    document.write('<div> ')
+
+    let c = 0;
+    while (c < array.length) {
+        let arr = array[c];
+        if (arr % 2 === 0) {
+            document.write(`<div> index: ${array.indexOf(arr)}, number: ${arr}  </div> `)
+            console.log(arr)
+        }
+        c++;
+    }
+    document.write('</div> <hr/>')
+
+    // 6. перебрати циклом for та вивести  числа тільки парні  значення
+    console.log('-------числа тільки з парним значенням циклом for----')
+    document.write('<div> ')
+
+    for (let c = 0; c < array.length; c++) {
+        let arr = array[c];
+        if (arr % 2 === 0) {
+            document.write(`<div> index: ${array.indexOf(arr)}, number: ${arr}  </div> `)
+            console.log(arr)
+        }
+    }
+    document.write('</div> <hr/>')
+
+    // 7. замінити кожне число кратне 3 на слово "okten"
+    console.log('-------"okten"----')
+    document.write('<div> ')
+
+
+    for (let c = 0; c < array.length; c++) {
+        let arr = array[c];
+        if (arr % 3 === 0) {
+            let arr = "okten"
+
+            document.write(`<div>   <b>значение кратное 3 :</b> ${arr} </div>`)
+            console.log(arr)
+        }
+    }
+    document.write('</div> <hr/>')
+
+    // 8. вивести масив в зворотньому порядку.
+    a = array.reverse()
+    document.write(`${a} `)
+
+    // 9. всі попередні завдання (окрім 8), але в зворотньому циклі (с заду на перед)
+
+    document.write('<hr/>  <b> 1) перебрати масив зворотнім циклом while </b> <br/>')
+    let backArray = [2, 17, 13, 6, 22, 31, 45, 66, 100, -18]
+    let d = backArray.length - 1;
+    while (d >= 0) {
+        let arr = backArray[d];
+        document.write(`${arr}, `)
+        d--;
+    }
+
+    document.write('<hr/> <b> 2) перебрати масив зворотнім циклом for</b> <br/>')
+    for (let d = backArray.length - 1; d >= 0; --d) {
+        let arr = backArray[d];
+        console.log(arr)
+        document.write(`${arr}, `)
+    }
+
+
+    document.write('<hr/> <b> 3) перебрати зворотнім циклом while та вивести  числа тільки з непарним індексом</b> <br/>')
+    let e = backArray.length - 1;
+    while (e >= 0) {
+        let arr = backArray[e];
+        if (backArray.indexOf(arr) % 2 !== 0) {
+            document.write(`<div> index: ${backArray.indexOf(arr)}, number: ${arr}  </div> `)
+        }
+        e--;
+    }
+
+    document.write('<hr/> <b> 4) перебрати зворотнім циклом for та вивести  числа тільки з непарним індексом</b> <br/>')
+
+    for (let e = backArray.length - 1; e >= 0; e--) {
+        let arr = backArray[e];
+        if (backArray.indexOf(arr) % 2 !== 0) {
+            document.write(`<div> index: ${backArray.indexOf(arr)}, number: ${arr}  </div> `)
+        }
+    }
+
+
+    document.write('<hr/> <b> 5) перебрати зворотнім циклом while та вивести  числа тільки парні  значення</b> <br/> ')
+
+    let f = backArray.length - 1;
+    while (f >= 0) {
+        let arr = backArray[f];
+        if (arr % 2 === 0) {
+            document.write(`<div>  number: ${arr}  </div> `)
+        }
+        f--;
+    }
+
+    document.write('<hr/> <b> 6) перебрати зворотнім циклом for та вивести  числа тільки парні  значення</b> <br/> ')
+
+    for (let f = backArray.length - 1; f >= 0; f--) {
+        let arr = backArray[f];
+        if (arr % 2 === 0) {
+            document.write(`<div> number: ${arr}  </div> `)
+        }
+    }
+
+    // 10. створити пустий масив та :
+    let number = [];
+    // - заповнити його 50 парними числами за допомоги циклу.
+    console.log("---50 парних---")
+    document.write(' <hr/> <b> - заповнити його 50 парними числами за допомоги циклу </b> <br/> ')
+
+    let number = [];
+    for (let i = 0; i < 50; i++) {
+
+        number.push(Math.round(i * 2))
+    }
+    console.log(number)
+    document.write(`  ${number} `)
+
+    // for (let i = 0; i < 100; i++) {
+    //     number[i] = i + 1;
+    //     let num = number[i];
+    //     if (num % 2 === 0) {
+    //         document.write(`<p> number: ${num} </p> `)
+    //     }
+    // }
+    // console.log(number)
+    document.write(`</div>`)
+    // - заповнити його 50 непарними числами за допомоги циклу.
+    console.log("---50 непарних---")
+    document.write('<hr/> <b> - заповнити його 50 непарними числами за допомоги циклу </b> <br/> ')
+    document.write(`<div class = "grid"> `)
+    let numbers = [];
+    for (let i = 0; i < 50; i++) {
+
+        numbers.push(Math.round(i * 2) + 1)
+    }
+    console.log(numbers)
+    document.write(`  ${numbers} `)
+
+    // for (let i = 0; i < 100; i++) {
+    //     number[i] = i + 1;
+    //     let num = number[i];
+    //     if (num % 2 !== 0) {
+    //         document.write(`<p> number: ${num} </p> `)
+    //         console.log(num)
+    //     }
+    // }
+    document.write(`</div>`)
+
+    // -Заповнити масив 20ма рандомними числами.
+    console.log("---20 рандомних---")
+    document.write('<hr/> <b> - заповнити масив 20ма рандомними числами </b> <br/> ')
+
+    let number20 = [];
+    for (let i = 0; i < 20; i++) {
+        number20.push(Math.round(Math.random() * 100))
+    }
+    document.write(`${number20}`)
+    console.log(number20)
+
+    //  let number25 = [];
+    // for (let i = 0; i < 25; i++) {
+    //     randomArray[i] = Math.round(Math.random() * 100)
+    // }
+    // document.write(`${randomArray}`)
+    // console.log(randomArray)
+
+
+
+    // -Заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732
+    console.log("---20 рандомних  від від 8 до 732 ---")
+    document.write('<hr/> <b> - заповнити масив 20ма рандомними чисалами в діапазоні від 8 до 732</b> <br/> ')
+
+    let numberArr = [];
+    for (let i = 0; i < 20; i++) {
+        numberArr[i] = Math.floor(Math.random(i) * (732 - 8) + 8)
+    }
+    document.write(`${numberArr}`)
+    console.log(numberArr)
+
+    // 2. Вивести за допомогою console.log кожен третій елемен
+    console.log("---кожен третій елемент---")
+    document.write('<hr/> <b> - кожен третій елемент</b> <br/> ')
+
+    for (let i = 2; i < numberArr.length; i += 3) {
+        let numArray = numberArr[i];
+        document.write(`${numArray} `)
+        console.log(numArray)
+
+    }
+    // 3. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним.
+    console.log("---кожен третій парний елемент---")
+    document.write('<hr/> <b> - кожен третій парний елемент</b> <br/> ')
+
+    for (let i = 2; i < numberArr.length; i += 3) {
+        let numArray = numberArr[i];
+        if (numArray % 2 === 0) {
+            document.write(`${numArray} `)
+            console.log(numArray)
+        }
+    }
+
+    // 4. Вивести за допомогою console.log кожен третій елемен тільки якщо цей елемент є парним та записати їх в новий масив
+    console.log("---кожен третій парний елемент, записать в новый массив---")
+    document.write('<hr/> <b> - кожен третій парний елемент, записать в новый массив</b> <br/> ')
+
+    let numArr = [];
+    for (let i = 2; i < 20; i += 3) {
+        if (numberArr[i] % 2 === 0) {
+            numArr.push(numberArr[i]);
+        }
+    }
+    document.write(`${numArr} `)
+    console.log(numArr);
+
+    // 5. Вивести кожен елемент масиву, сусід справа якого є парним
+    console.log("---кожен елемент масиву, сусід справа якого є парним---")
+    document.write('<hr/> <b> ---кожен елемент масиву, сусід справа якого є парним---</b> <br/> ')
+    let arrNeighbor = [1, 2, 3, 5, 7, 9, 56, 8, 67, 35, 82, 15, 14, 67]
+    document.write(`${arrNeighbor}`)
+    document.write(`<br/>`)
+    for (let i = 0; i < arrNeighbor.length; i++) {
+        if (arrNeighbor[++i] % 2 === 0) {
+            console.log(arrNeighbor[--i]);
+        }
+    }
+
+    // 6. Є масив з числами [100,250,50,168,120,345,188], Які характеризують вартість окремої покупки. Обрахувати середній чек.
+    console.log("---среднее арифметическое---")
+    document.write('<hr/> <b> ---среднее арифметическое---</b> <br/> ')
+    let arrBuy = [100, 250, 50, 168, 120, 345, 188]
+    let sum = 0;
+    for (let i = 0; i < arrBuy.length; i++) {
+        sum += arrBuy[i];
+    }
+    let result = sum / arrBuy.length
+    console.log(result)
+    document.write(`${result}`)
+
+    // 7. Створити масив з рандомними значеннями, помножити всі його елементи на 5 та перемістити їх в інший масив.
+    console.log("---масив з рондомними значеннями * 5---")
+    document.write('<hr/> <b> ---масив з рондомними значеннями * 5---</b> <br/> ')
+    let randomArr = [];
+    let ranArray = [];
+    for (let i = 0; i < 10; i++) {
+        randomArr.push(Math.round(Math.random() * 10))
+        ranArray.push(randomArr[i]*5 ); // перемістив у новий масив та * елементи на 5
+    }
+    document.write(`-рондомні значення масива: ${randomArr} <br/> `)
+    console.log(randomArr)
+    document.write(`-помножені на 5 :${ranArray}<br/> `)
+    console.log(ranArray)
+
+    console.log("---інший варіант попереднього завдання ---")
+    document.write('<hr/> <b> ---інший варіант попереднього завдання---</b> <br/> ')
+
+    let randomArr_2 = [];
+    let ranArray_2 = [];
+    for (let i = 0; i < 10; i++) {
+        randomArr_2.push(Math.round(Math.random() * 10)*5) // помножив рандомні елементи на 5
+        ranArray_2.push(randomArr_2[i] ); // перемістив у новий масив
+    }
+    document.write(`-рондомні значення масива помножені на 5: ${randomArr_2}  <br/> `)
+    console.log(randomArr_2)
+    document.write(`-переміщенні у новий массив :${ranArray_2} `)
+    console.log(ranArray_2)
+
+    // 8. Створити масив з будь якими значеннями (стрінги, числа, і тд...). пройтись по ньому,
+    //     і якщо елемент є числом - додати його в інший масив.
+    console.log("---смешанный массив, выводим числа в другой массив---")
+    document.write('<hr/> <b> ---смешанный массив, выводим числа в другой массив---</b> <br/> ')
+
+    let mixArr = ['cat', 5, 8, 'boy', true, 1, 'dog', 4, 'fox', 54, 32, 'pig', 33, false, 3]
+    let mixArray = [];
+    for (let i = 0; i < mixArr.length; i++) {
+        const mix = mixArr[i];
+        if (typeof mix === 'number') {
+            mixArray.push(mixArr[i]);
+        }
+    }
+    console.log(mixArray)
+    document.write(`Весь первый массив: ${mixArr} <br/>`)
+    document.write(`Числа добавленные в новый массив: ${mixArray}`)
+</script>
+</body>
+</html>

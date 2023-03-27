@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Task2</title>
+    <title>Classwork</title>
 </head>
 <body>
 
@@ -50,6 +50,7 @@
     let a10 = 75 + 'кг';
     console.log(a10) // 75кг
 
+
     // 4. Напишіть код, який вираховує площу прямокутника висотою 23см. (змінна height) та шириною 10см (змінна width).
     // Значееня площі зберігати в змінній s.
 
@@ -86,10 +87,10 @@
     //     Ваше ФИО, возраст, хобби (каждой на новой строки спомощью \n).
 
 
-    let name =" ПІБ: Holenko Valery Yurievich";
+    let fullName =" ПІБ: Holenko Valery Yurievich";
     let age= "ВІК: 39";
     let hobby="ХОБІ: already programming";
-    let a = `${name}\n ${age}\n ${hobby}` ;
+    let a = `${fullName}  ${age} ${hobby}` ;
     alert(a);
 
     alert(" ПІБ:Holenko Valery Yurievich \n  ВІК:39 \n ХОБІ: already programming " );
@@ -103,34 +104,19 @@
     let str2= 'ты';
     let str3= 'такой?';
     let concatenation= `${str1} ${str2} ${str3}` ;
-    document.write(concatenation);
+    document.write(concatenation + "<br/>");
 
     // 10. Подумайте Какие значения выведет в окно браузера следующий фрагмент кода?  и почему?
-    let str = "20";
-    let a = 5;
-    document.write(str + a + "<br/>"); // 205 есть string при сложении стринга и числа, число принимается за строку
-    document.write(str - a + "<br/>"); //15 есть string при сложении стринга и числа, число принимается за строку
-    document.write(str * "2" + "<br/>"); //40 при умножении и делении числа в строках преобразуютя в числа
-    document.write(str / 2 + "<br/>"); // 10при умножении и делении числа в строках преобразуютя в числа
-
-    // 13. С помощью окна ввода, вызываемого методом prompt, сделать сложение двух чисел,
-    // а вывод результата при помощи метода alert
-
-    let num1 = +prompt('Введите первое число',);
-    let num2 = +prompt('Введите второе число',);
-    let result= num1+num2;
-    alert(`Результат сложения чисел:  ${result}`);
-
-    // 14. С помощью окна ввода, вызываемого методом prompt, пользователь последовательно выводит имя, фамилию и возраст,
-    // а вам не обходимо вывести строку такого вида Доброго вечера Иван Иванов, мои поздравления что вам 32 ,
-    // а вывод результата при помощи метода alert
+    let string = "20";
+    let x = 5;
+    document.write(string + x + "<br/>"); // 205 есть string при сложении стринга и числа, число принимается за строку
+    document.write(string - x + "<br/>"); //15 есть string при сложении стринга и числа, число принимается за строку
+    document.write(string * "2" + "<br/>"); //40 при умножении и делении числа в строках преобразуютя в числа
+    document.write(string / 2 + "<br/>"); // 10при умножении и делении числа в строках преобразуютя в числа
 
 
-    let name =prompt('Імя', 'Валерій');
-    let midName = prompt('Призвище', 'Голенко');
-    let old = prompt('Вік', 39 );
 
-    document.write(`<h3>"Доброго вечора, ${name} ${midName}. Мої вітання, що Вам ${old} років"</h3>`);
+
 
   </script>
 
